@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://karuroso81.github.io/tododive",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
