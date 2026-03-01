@@ -10,7 +10,7 @@ Tal como se solicita en los requisitos del proyecto, aquí están los enlaces a 
 [Prototipo Figma](https://www.figma.com/proto/6cDiWMuCkxabbc53bYgS43/Sin-t%C3%ADtulo?node-id=6-3&t=ll2Exe0FdReLWsGv-1)
 
 ↳ **Enlace a la página publicada en GitHub Pages:**  
-[Inserta aquí tu enlace a GitHub Pages]
+[ GitHub Pages](https://karuroso81.github.io/tododive/)
 
 ---
 
