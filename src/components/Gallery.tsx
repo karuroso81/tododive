@@ -2,15 +2,15 @@ import { galleryImages } from "../data/gallery";
 
 export const Gallery = () => {
   return (
-   <section
-  id="galeria"
-  className="mt-12 bg-[#121939] border border-[#1c2a4a]
+    <section
+      id="galeria"
+      className="mt-12 bg-[#121939] border border-[#1c2a4a]
              rounded-3xl p-6"
->
+    >
       <h2 className="text-2xl font-bold mb-4">
-         <svg className="w-5 h-5 text-[#1cffb3]">
-      <use href="/sprites.svg#icon-gallery" />
-    </svg>
+        <svg className="w-5 h-5 text-[#1cffb3]">
+          <use href={`${import.meta.env.BASE_URL}sprites.svg#icon-gallery`} />
+        </svg>
         Galería
       </h2>
 

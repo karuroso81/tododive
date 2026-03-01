@@ -16,26 +16,26 @@ export const Destinations = () => {
     setShowModal(true);
   };
 
-const handleConfirm = () => {
-  if (!selectedDestination) return;
+  const handleConfirm = () => {
+    if (!selectedDestination) return;
 
-  const reservationProduct = {
-    id: 1000 + selectedDestination.id, // evitar colisión
-    title: selectedDestination.title,
-    description: `${selectedDestination.description} · ${selectedDestination.depth}`,
-    price: 0,
-    image: selectedDestination.image,
-    type: "destination" as const
+    const reservationProduct = {
+      id: 1000 + selectedDestination.id, // evitar colisión
+      title: selectedDestination.title,
+      description: `${selectedDestination.description} · ${selectedDestination.depth}`,
+      price: 0,
+      image: selectedDestination.image,
+      type: "destination" as const
+    };
+
+    addToCart(reservationProduct);
+    setShowModal(false);
+    toggleCart();
+
+    document
+      .getElementById("contacto")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
-
-  addToCart(reservationProduct);
-  setShowModal(false);
-  toggleCart();
-
-  document
-    .getElementById("contacto")
-    ?.scrollIntoView({ behavior: "smooth" });
-};
 
 
   return (
@@ -46,14 +46,14 @@ const handleConfirm = () => {
                    rounded-3xl p-6"
       >
         <h2 className="text-2xl font-bold mb-4">
-            <svg className="w-5 h-5 text-[#00c2ff]">
-    <use href="/sprites.svg#icon-destination" />
-  </svg>
-          
+          <svg className="w-5 h-5 text-[#00c2ff]">
+            <use href={`${import.meta.env.BASE_URL}sprites.svg#icon-destination`} />
+          </svg>
+
           Próximas salidas
-           <svg className="w-5 h-5 text-[#1cffb3]">
-      <use href="/sprites.svg#icon-calendar" />
-    </svg>
+          <svg className="w-5 h-5 text-[#1cffb3]">
+            <use href={`${import.meta.env.BASE_URL}sprites.svg#icon-calendar`} />
+          </svg>
         </h2>
 
         <div className="space-y-4">
@@ -65,10 +65,9 @@ const handleConfirm = () => {
                 key={dest.id}
                 className={`flex flex-col sm:flex-row gap-4
                   rounded-2xl p-4 border transition
-                  ${
-                    isSelected
-                      ? "bg-[#0c2740] border-[#00c2ff] ring-2 ring-[#00c2ff]/40"
-                      : "bg-[#0e1430] border-[#1c2a4a]"
+                  ${isSelected
+                    ? "bg-[#0c2740] border-[#00c2ff] ring-2 ring-[#00c2ff]/40"
+                    : "bg-[#0e1430] border-[#1c2a4a]"
                   }`}
               >
                 {/* Imagen */}

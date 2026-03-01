@@ -27,7 +27,7 @@ export const IconPreview = () => {
                        rounded-xl p-4"
           >
             <svg className="w-8 h-8 text-[#1cffb3]">
-              <use href={`/sprites.svg#${icon}`} />
+              <use href={`${import.meta.env.BASE_URL}sprites.svg#${icon}`} />
             </svg>
 
             <span className="text-sm text-[#b9c4d6]">

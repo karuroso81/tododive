@@ -8,7 +8,7 @@ export const Contact = () => {
       {/* TÍTULO */}
       <h2 className="text-2xl font-bold mb-3 flex items-center gap-2">
         <svg className="w-6 h-6 text-green-400">
-          <use href="/sprites.svg#icon-whatsapp" />
+          <use href={`${import.meta.env.BASE_URL}sprites.svg#icon-whatsapp`} />
         </svg>
         Reserva / Contacto
       </h2>
@@ -22,7 +22,7 @@ export const Contact = () => {
       <ul className="space-y-3">
         <li className="flex items-center gap-2">
           <svg className="w-5 h-5 text-green-500">
-            <use href="/sprites.svg#icon-whatsapp" />
+            <use href={`${import.meta.env.BASE_URL}sprites.svg#icon-whatsapp`} />
           </svg>
           <strong>WhatsApp:</strong>
           <a
